@@ -4,9 +4,12 @@ const refs = {
 };
 refs.inputEl.addEventListener('input', onInputChange);
 function onInputChange(event) {
-    if (event.currentTarget.value.length === 0) {
+    if (event.currentTarget.value === '') {
         refs.spanEl.textContent = 'Anonymous';
     }
     refs.spanEl.textContent = event.currentTarget.value;
+    if (event.currentTarget.value === '') {
+        refs.spanEl.textContent = 'Anonymous';
+    }
  
 };
